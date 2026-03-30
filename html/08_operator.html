@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 할당 연산자
+        let x = 1;
+        let y = x;
+
+        x = x + y;
+        console.log(x)
+
+        x = x - y;
+        console.log(x)
+
+        x = x * y;
+        console.log(x)
+
+        x = x / y;
+        console.log(x)
+
+        x = 5;
+        y = 2;
+        let z = x % y;
+        console.log(z);
+
+        x = 3;
+        y = 2;
+        z = x ** y; //제곱
+        console.log(z);
+
+        // 복합할당 연산자: +=, -=, *=, /=, %=
+        x = 2;
+        y = 3;
+        x += y;
+        y += x;
+        console.log(y);
+
+
+        // 비교연산자: 데이터의 값을 비교
+        // >  <  >=  <=  ==  ===  !=  !==
+        x = 3;
+        y = "3";
+        console.log(typeof x);
+        console.log(typeof y);
+        console.log(x == y); // true, 값비교 => 유연성 => 장점이자 단점
+        console.log(x === y);// false, 타입까지 비교
+
+        console.log(x != y);// false
+        console.log(x !== y);// true
+
+
+        // 산술연산자 
+        // ++(증가) --(감소) +(숫자화) -(단항부정: 부호바꾸기)
+
+        x = 5;
+        y = ++x;
+        console.log(x); //6
+        console.log(y); //6
+        x++;
+        console.log(x);
+
+        x = 5;
+        y = x++; // 5인 상태에 x를 넣고 그 다음 x를 1 증가 y는 5, x = 6이 됨 
+        //시험 중요
+        console.log(x);
+        console.log(y);
+        y = --x;
+        console.log(x);
+        console.log(y);
+        y = x--;
+        console.log(x);
+        console.log(y);
+
+        x = -3;
+        console.log(x);
+        console.log(-x); // 부호가 바뀜 -> 단항부정
+
+        x = "7";
+        y = +x;
+        console.log(typeof x);
+        console.log(typeof y);
+        console.log(x === y);
+
+        // prompt로 두 수를 입력받아 합을 구하는 코드 작성
+        // let num1 = prompt("첫 번째 수 입력");
+        // let num2 = prompt("두 번째 수 입력");
+        // console.log((+num1) + (+num2));
+        // let c = parseInt(num1);
+        // let d = parseInt(num2);
+        // console.log(c + d);
+
+
+        // 논리연산자: 여러 조건이 있을 때 참인지 확인하는 것
+        // &&(and: 모든 조건이 다 참이여야 true) ||(or: 하나라도 참이면 true)
+        let o = true && false; // false
+        o = 3 > 2 && 4 > 7; // false
+        o = 3 > 2 && 8 > 7; // true
+        o = true || false; // true
+        o = 3 > 2 || 4 > 7; // true
+        o = 3 > 4 || 4 < 2 || 2 > 1; // js에서만 가능  true
+
+
+        // 문자열 연산자: +  (concate)
+        let firstName = "John";
+        let lastName = " Bacon";
+        let fullName = firstName + lastName;
+        console.log(fullName);
+
+        // 삼항 연산자: 조건 ? 참 : 거짓;
+        let age = 16;
+        let isAdult = age >= 20 ? "성인" : "미성년자";
+        console.log(isAdult);
+
+        // 활용 : 입력받아 90점 이상이면 "A", 80점 이상이면 "B", 70점 이상이면 "C", 60점 이상이면 "D", 이것도 아니면 "E"라고 출력
+        let testNum = +prompt("점수 입력");
+        let value = (testNum >= 90) ? "A" :
+            (testNum >= 80) ? "B" :
+                (testNum >= 70) ? "C" :
+                    (testNum >= 60) ? "D" : "E";
+        console.log(value);
+    </script>
+</body>
+
+</html>
