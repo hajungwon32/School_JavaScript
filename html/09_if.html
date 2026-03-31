@@ -10,19 +10,25 @@
 <body>
     <script>
         // 나이에 따른 버스 요금 계산
-        let age = prompt("나이 입력");
+        let age = +prompt("나이 입력");
 
-        if (age <= 6) {
-            console.log("무료");
-        } else if (age < 12) {
-            console.log("450원");
-        } else if (age < 18) {
-            console.log("700원");
-        } else if (age >= 70) {
-            console.log("무료(노인)");
+        if (age) {
+            if (age <= 6 || age >= 70) {
+                console.log("무료");
+            } else if (age < 12) {
+                console.log("450원");
+            } else if (age < 18) {
+                console.log("700원");
+            } else {
+                console.log("1000원");
+            }
         } else {
-            console.log("1000원");
+            console.log("입력 없음")
         }
+
+
+
+
 
 
     </script>
